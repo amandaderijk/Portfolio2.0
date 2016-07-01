@@ -1,2 +1,2 @@
 # Portfolio2.0
-Time for a new portfolio
+Creating a new portfolio with HTML, SCSS, GruntJS and VanillaJS
