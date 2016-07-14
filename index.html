@@ -7,37 +7,53 @@
 	</head>
 	<body>
 		<header>
-			<h1>Hi there, I'm Amanda</h1>
-			<h2 class="header-text">A front-end developer and UX designer</h2>
+			<div class="header-text">
+				<h1>Hi there, I'm Amanda</h1>
+				<h2 class="header-text">I'm a front-end developer and UX designer</h2>
+			</div>
 		</header>
 
 		<div class="main-nav">
 			<a href="#about"><img class="logo" src="img/logo.png" alt="logo"></a>
 			<nav>
 				<ul>
-					<li><a href="#about" class="active">About</a></li>
-					<li><a href="#portfolio">Portfolio</a></li>
-					<li><a href="#skills">Skills</a></li>
-					<li><a href="#experiences">Experiences</a></li>
-					<li><a href="#contact">Contact</a></li>
+					<li><a href="#contact">Lets have coffee!</a></li>
 				</ul>
 			</nav>
 		</div>
 
 		<section class="portfolio">
-			<p>Here an overview of my most resent work</p>
+			<h3>Currently I work for Competa IT, here I work on projects like</h3>
+
+			<ul class="portfolio-items">
+				<li class="portfolio-item"></li>
+				<li class="portfolio-item"></li>
+				<li class="portfolio-item"></li>
+				<li class="portfolio-item"></li>
+				<a href="">see more</a>
+			</ul>
 		</section>
 
-		<section class="skills">
-			<p>Here an overview of my skills</p>
-		</section>
+		<!-- <section class="skills">
+			<h3>What do I do?</h3>
+		</section>-->
 
-		<section class="experience">
-			<p>Here an overview of my experience</p>
-		</section>
+	<section id="contact" class="contact-form">
+		<h2>Lets have coffee!</h2>
+		<form action="contact.php" method="post" id="contact-form">
+ 			<input type="text" id="name"  name="name" placeholder ="name" onblur="checkName()">
+  			<input type="email" id="email"  name="email" placeholder ="email" onblur="checkEmail()">
+  			<input type="text" id="subject" name="subject" placeholder ="subject" onblur="checkSubject()">
+  			<textarea id="message" placeholder="message" name="message" onkeyup="checkMessage()"></textarea>
+			<div id="feedback" class="feedback">You forgot to fill in your full name</div>
+			<div id="feedback-email" class="feedback">You forgot to fill in your email</div>
+			<div id="feedback-subject" class="feedback">You have to fill in a subject</div>
+			<div id="feedback-message" class="feedback">You have to fill in a message</div>
+			<input id="submit" class="form-btn" type="submit" value="send" disabled>
+		</form>
+	</section>
 
-		<section class="contact">
-			<p>Here a contact form</p>
-		</section>
+		<script src="//localhost:35729/livereload.js"></script>
+		<script type="text/javascript" src="js/formvalidation.js"></script>
 	</body>
 </html>

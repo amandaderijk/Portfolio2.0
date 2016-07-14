@@ -13,7 +13,7 @@ module.exports = function (grunt) {
                     base: './',
                     livereload: true,
                     open: {
-                        target: 'http://localhost:6003'
+                        target: 'http://localhost:8080/portfolio2.0'
                     }
                 }
             }
@@ -23,7 +23,7 @@ module.exports = function (grunt) {
                 files: [{
                     expand: true,
                     cwd: 'css/',
-                    src: ['*.css', '!*.min.css'],
+                    src: ['*.css', '!**.min.css'],
                     dest: 'css/',
                     ext: '.min.css'
                 }]

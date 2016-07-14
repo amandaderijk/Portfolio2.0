@@ -1,54 +1,111 @@
-/*orange: #F4A13E*/
-/*blue: #2C3E50 */
+@import url(https://fonts.googleapis.com/css?family=Kalam:400,300,700);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
+h1, h2, h3 {
+  width: 100vw;
+  text-align: center;
+  font-family: "Kalam", cursive; }
 
-h1, h2{
-	margin-top: calc(55vh - 55px);
-	position: absolute;
-    width: 100vw;
-    text-align: center;
-}
+h2 {
+  font-weight: normal;
+  font-size: 2.5em; }
 
-h2{
-	margin-top: calc(65vh - 55px);
-	font-weight: normal;
-	font-size: 2.5em;
-}
+h3 {
+  font-size: 1.5em; }
 
-header{
-	height: calc(100vh - 50px);
-	background-image: url(../img/header.jpg);
-	background-size: cover;
-	color: #2C3E50;
-}
+header {
+  height: calc(50vh - 50px);
+  background-image: url(../img/header.jpg);
+  color: #2C3E50;
+  background-position-y: -170px;
+  background-size: 100%;
+  background-repeat: no-repeat; }
+  header .header-text {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: calc(50vh - 50px);
+    justify-content: flex-end;
+    padding-bottom: 25px; }
+    header .header-text h1, header .header-text h2 {
+      height: auto;
+      margin: 0; }
 
-.main-nav{
-	width: 100vw;
-	height: 50px;
-	background-color: #2C3E50;
-}
+.main-nav {
+  width: 100vw;
+  height: 50px;
+  background-color: #2C3E50; }
+  .main-nav .logo {
+    width: 150px;
+    float: left;
+    margin: 9px 40px; }
+  .main-nav nav ul {
+    list-style-type: none;
+    margin: 0;
+    float: right;
+    margin-right: 35px; }
+    .main-nav nav ul li {
+      float: left;
+      padding: 0 15px;
+      margin: 0;
+      height: 50px; }
+      .main-nav nav ul li a {
+        text-decoration: none;
+        color: white;
+        line-height: 50px;
+        text-transform: uppercase;
+        font-family: "Lato", sans-serif;
+        font-weight: 300; }
+        .main-nav nav ul li a:hover {
+          color: #F4A13E; }
 
-.logo{
-	width: 150px;
-	float: left;
-	margin: 9px 40px;
-}
+.portfolio {
+  text-align: left; }
+  .portfolio .portfolio-items {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0; }
+    .portfolio .portfolio-items .portfolio-item {
+      list-style-type: none;
+      height: 300px;
+      width: 300px;
+      background-color: #F4A13E;
+      margin: 30px; }
 
-nav ul {
-	list-style-type: none;
-	margin: 0;
-	float: right;
-    margin-right: 35px;
-}
+.contact-form {
+  min-height: calc(100vh - 178px); }
+  .contact-form form {
+    width: 100%;
+    margin-bottom: 10px; }
+    .contact-form form input, .contact-form form textarea {
+      width: 60%;
+      height: 55px;
+      border: none;
+      font-size: 15px;
+      display: block;
+      margin-left: 20%;
+      padding-left: 20px;
+      outline: none;
+      border-bottom: 1px solid #b2b2b2; }
+    .contact-form form textarea {
+      padding-top: 35px; }
+  .contact-form .form-btn {
+    height: 40px;
+    width: 20%;
+    margin-top: 25px;
+    background-color: #F4A13E;
+    color: #fff;
+    text-transform: uppercase;
+    margin-left: 40%;
+    border: none; }
+  .contact-form .feedback {
+    padding: 15px;
+    background-color: #f3f3f3;
+    margin: 0 auto;
+    display: none;
+    width: 50%; }
+  .contact-form .wrong-input {
+    border-bottom: 1px solid #c0392b; }
+  .contact-form .completed-input {
+    border-bottom: 1px solid #27ae60; }
 
-nav ul li{
-	float: left;
-	padding: 0 15px;
-	margin: 0;
-	height: 50px;
-}
-
-nav ul li a{
-	text-decoration: none;	
-	color: white;
-	line-height: 50px;
-}
+/*# sourceMappingURL=style.css.map */
