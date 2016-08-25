@@ -1,0 +1,28 @@
+.home{
+	height: 100vh;
+	background-image: url(../img/home2.jpg);
+	color: $blue;
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+
+	.home-text{
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		justify-content: center;
+		// height: auto;
+		// width: 50%; 
+		width: 440px;
+		height: 100px;
+		padding: 5px;
+		background-color: rgba($white, .3);
+
+		h1, h2{
+			height: auto;
+		    margin: 0;
+		}
+	}
+}
