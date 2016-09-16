@@ -1,10 +1,15 @@
-header{
+.main-nav{
 	width: 100vw;
 	height: 50px;
-	background-color: rgba($white, .8);
+	background-color: rgba($white, .5);
 	position: fixed;
+	z-index: 15;
+	transition: all .5s ease-in-out;
+	 -webkit-transition: all .5s ease-in-out;
 
-
+	&.nontransparant{
+		background-color: $white;
+	}
 	.logo{
 		width: 150px;
 		float: left;

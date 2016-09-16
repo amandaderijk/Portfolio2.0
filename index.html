@@ -3,10 +3,10 @@
 	<head>
 		<title>Amanda de Rijk</title>
 		<link rel="stylesheet" type="text/css" href="css/style.css">
-		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	</head>
 	<body>
-		<header>
+		<header id="navBar" class="main-nav">
 			<a href="#about"><img class="logo" src="img/arlogo.png" alt="logo"></a>
 			<nav>
 				<ul>
@@ -22,34 +22,39 @@
 			</div>
 		</div>
 
-		<section class="about">
-			<p>
-			I am a UX designer &amp; front-end developer. During my study Communication &amp; Media design I noticed that I like to participate in the full development of a website, so from the wireframes untill the moment it goes live. Because of this I joined Competa IT where I'm trained to be a front-end developer. So besides my design skills I'm also familiar with HTML5, CSS3, SCSS and the basics of JavaScript.
+		<section id="aboutSection" class="about">
+			<h3>My story</h3>
+			<p class="italic about-text">here comes a really really nice oneliner</p>
+			<p class="about-text">
+			When I was a little girl I loved to play with colors and just be creative. I've never lost that creativity, so the study Communication &amp; Media design might have even chosen me instead of the other way around. During this study I noticed that I like to participate in the full development of a website, so from the user journeys and wireframes all up until the moment the it goes live. 
+			</p><p class="about-text">
+			My love for digital design and development made me join Competa IT, where I followed a training to be a front-end developer. Because of my study and this training I have both skills in designing and in front-end development. If you would like to have a look at an up-to-date list of my skills please have a look at my <a href="https://nl.linkedin.com/in/amandaderijk">Linked-In</a>!
+			</p>
 
-			I'm a small-town girl, currently living in the big city. At my free time I'm always busy trying out new recepes, searching for new dream destinations or meeting with friends. Another thing I love to do is indoor climbing. I'm a very social person, I like being surrounded with people and love to learn from everybody.
-
-			Want to know more about me?
-			[Facebook] [LinkedIn]
+			<p class="about-text">
+			In my spare time I'm always busy trying out new recipes, searching for new dream destinations or meeting with friends. Another thing I love to do is indoor climbing. I'm a very social person; I like being surrounded with people and love to learn from everybody.
 			</p>
 		</section>
 
-		<section class="portfolio">
-			<h3>I have worked on projects like</h3>
+		<section id="portfolioSection" class="portfolio">
+			<h3>My work</h3>
 
 			<ul class="portfolio-items">
-				<li class="portfolio-item"></li>
+				<button onclick="openLightbox()"><li class="portfolio-item"></li></button>
 				<li class="portfolio-item"></li>
 				<li class="portfolio-item"></li>
 				<li class="portfolio-item"></li>
 				<li class="portfolio-item"></li>
 			</ul>
 <!-- 			<button><a href="">see more</a></button> -->
+
+			<div class="lightbox">
+				<div class="box">
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.</p>
+				</div>
+			</div>
 		</section>
-
-		<!-- <section class="skills">
-			<h3>What do I do?</h3>
-		</section>-->
-
+	
 	<section id="contact" class="contact-form">
 		<h2>Lets have coffee!</h2>
 		<form action="contact.php" method="post" id="contact-form">
@@ -67,5 +72,7 @@
 
 		<script src="//localhost:35729/livereload.js"></script>
 		<script type="text/javascript" src="js/formvalidation.js"></script>
+		<script type="text/javascript" src="js/scrollAnimation.js"></script>
+		<script type="text/javascript" src="js/lightbox.js"></script>
 	</body>
 </html>

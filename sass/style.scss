@@ -1,8 +1,11 @@
 @import 'modules/_colors.scss';
 @import 'modules/_typo.scss';
 
-@import 'sections/_nav.scss';
-@import 'sections/_home.scss';
 @import 'sections/_about.scss';
-@import 'sections/_portfolio.scss';
 @import 'sections/_contact.scss';
+@import 'sections/_home.scss';
+@import 'sections/_lightbox.scss';
+@import 'sections/_nav.scss';
+@import 'sections/_portfolio.scss';
+
+@import 'vendor/normalize.scss'
