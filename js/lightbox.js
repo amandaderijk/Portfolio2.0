@@ -1,13 +1,18 @@
 // js file for the portfolio lightbox
+var portfolioItems = document.querySelectorAll(".portfolio-item"), 
+	lightbox = document.getElementById('lightbox'),
+	image = document.createElement("img"),
+	lightboxImage = document.getElementById('lightbox').appendChild(image);
+	closeBtn = document.getElementById('close');
 
-// if clicked on a portfolio item give the lightbox a display: flex;
+for (var k = 0; k < portfolioItems.length ; k++) {
+	portfolioItems[k].onclick = function(e) {
+		var portfolioBackground = window.getComputedStyle(this, null).getPropertyValue("background-image");
+		lightbox.classList.add('show');
+		image.src = portfolioBackground.replace('url("http://localhost:8080/portfolio2.0/','').replace('")','');
+	};
 
-function openLightbox(){
-	var lightbox = document.getElementsByClassName(lightbox);
-	console.log("clicked " + lightbox);
-	for(var i = 0; i < lightbox.length; i++){
-		lightbox[i].style.display='flex';
-	}
+	closeBtn.onclick = function(e){
+		lightbox.classList.remove('show');
+	};
 }
-
-// simpel: als item 1 is geklikt is afb 1 de achtergrond, anders 2 anders 3 enz. 

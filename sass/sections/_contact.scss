@@ -15,12 +15,18 @@
 			border: none;
 			font-size: 15px;  
 			display: block;
-			margin-left: 20%;
-			padding-left: 20px;
+			margin: 0 20%;
+			padding: 0 20px;
 			outline: none;
 			border-bottom: 1px solid $white;
 			background-color: $lynch;
 			color: $white;
+
+			@media screen and (max-width: 600px){
+				width: 90%;
+				margin: 0 5%;
+				padding: 0;
+			}
 		}
 
 		textarea{
@@ -30,6 +36,7 @@
 
 	.form-btn{
 		height: 40px;
+		min-width: 120px;
 		width: 20%;
 		background-color: $blue; 
 		color: #fff;
@@ -53,4 +60,9 @@
 	.completed-input{
 		border-bottom: 1px solid #27ae60;
 	}
+
+    @media screen and (max-width: 600px){
+    	padding: 10px;
+    }
+
 }

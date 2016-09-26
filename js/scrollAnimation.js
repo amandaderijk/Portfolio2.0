@@ -13,6 +13,7 @@ window.onscroll = function changeClasses(){
          navBar.className =  ('main-nav');
     }
 
+    // for loop makes them visible one by one on scroll
     for (var i = 0; i < portfolioItems.length; i++){
 	    if(portfolioItems[i].getBoundingClientRect().top <= window.innerHeight - 75) {
 	        portfolioItems[i].className = ('portfolio-item visible');

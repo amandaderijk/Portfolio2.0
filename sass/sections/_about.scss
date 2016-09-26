@@ -1,5 +1,4 @@
 .about{
-	/*height: 50vh;*/
 	background-color: $iron;
 	padding: 40px 25%;
 	text-align: center;
@@ -22,7 +21,13 @@
 		}
 
 		&.visible{
-			opacity: 1;
+			opacity: 1;  
 		}
 	}
+
+	@media screen and (max-width: 600px){
+    	padding: 20px 5%;
+    	line-height: 25px;
+    	font-size: 14px;
+    }
 }

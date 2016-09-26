@@ -1,5 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Kalam:400,300,700);
-@import url(https://fonts.googleapis.com/css?family=Lato:300i,400i,400,300,700);
 h1, h2, h3 {
   text-align: center;
   font-family: "Lato", sans-serif; }
@@ -25,7 +23,6 @@ p {
   font-weight: 300; }
 
 .about {
-  /*height: 50vh;*/
   background-color: #DADFE1;
   padding: 40px 25%;
   text-align: center;
@@ -43,6 +40,11 @@ p {
       font-style: italic; }
     .about p.visible {
       opacity: 1; }
+  @media screen and (max-width: 600px) {
+    .about {
+      padding: 20px 5%;
+      line-height: 25px;
+      font-size: 14px; } }
 
 .contact-form {
   background-color: #6C7A89;
@@ -59,16 +61,22 @@ p {
       border: none;
       font-size: 15px;
       display: block;
-      margin-left: 20%;
-      padding-left: 20px;
+      margin: 0 20%;
+      padding: 0 20px;
       outline: none;
       border-bottom: 1px solid #fff;
       background-color: #6C7A89;
       color: #fff; }
+      @media screen and (max-width: 600px) {
+        .contact-form form input, .contact-form form textarea {
+          width: 90%;
+          margin: 0 5%;
+          padding: 0; } }
     .contact-form form textarea {
       padding-top: 35px; }
   .contact-form .form-btn {
     height: 40px;
+    min-width: 120px;
     width: 20%;
     background-color: #2C3E50;
     color: #fff;
@@ -85,6 +93,9 @@ p {
     border-bottom: 1px solid #c0392b; }
   .contact-form .completed-input {
     border-bottom: 1px solid #27ae60; }
+  @media screen and (max-width: 600px) {
+    .contact-form {
+      padding: 10px; } }
 
 .home {
   height: 100vh;
@@ -107,22 +118,35 @@ p {
     .home .home-text h1, .home .home-text h2 {
       height: auto;
       margin: 0; }
+  @media screen and (max-width: 600px) {
+    .home {
+      height: 60vh; } }
 
 .lightbox {
   display: none;
   justify-content: center;
   align-content: center;
-  position: absolute;
+  position: fixed;
   top: 50px;
   left: 0;
   width: 100vw;
   height: 100%;
-  overflow: visible; }
-  .lightbox .box {
-    height: 120vh;
-    width: 50vw;
-    text-align: center;
-    background: #DADFE1; }
+  overflow: scroll;
+  z-index: 20;
+  background-color: #fff; }
+  .lightbox.show {
+    display: flex; }
+  .lightbox img {
+    width: 100vw;
+    height: auto;
+    z-index: 1;
+    position: absolute; }
+  .lightbox #close {
+    z-index: 2;
+    height: 40px;
+    width: 40px;
+    right: 20px;
+    position: fixed; }
 
 .main-nav {
   width: 100vw;
@@ -143,9 +167,6 @@ p {
     margin: 0;
     float: right;
     margin-right: 5%; }
-    @media screen and (max-width: 600px) {
-      .main-nav nav ul {
-        margin: 0; } }
     .main-nav nav ul li {
       float: left;
       padding: 0 15px;
@@ -160,6 +181,13 @@ p {
         font-weight: 300; }
         .main-nav nav ul li a:hover {
           color: #F4A13E; }
+    @media screen and (max-width: 600px) {
+      .main-nav nav ul {
+        margin: 0;
+        padding: 0; } }
+    @media screen and (max-width: 320px) {
+      .main-nav nav ul {
+        display: none; } }
 
 .portfolio {
   padding: 40px 0 50px 0; }
@@ -180,11 +208,11 @@ p {
       width: 330px;
       margin: 20px;
       background-color: #DADFE1;
-      transition: all .3s ease-in-out;
-      -webkit-transition: all .3s ease-in-out;
       opacity: 0;
-      transition: opacity .2s linear; }
-      *
+      transition: opacity .3s ease-in-out;
+      -webkit-transition: opacity .3s ease-in-out;
+      background: url(attr(data-background));
+      background-size: cover; }
       .portfolio .portfolio-items .portfolio-item.visible {
         opacity: 1; }
       .portfolio .portfolio-items .portfolio-item:hover {
@@ -201,6 +229,17 @@ p {
         transition-delay: .9s; }
       .portfolio .portfolio-items .portfolio-item:nth-child(5) {
         transition-delay: 1.1s; }
+        @media screen and (max-width: 600px) {
+          .portfolio .portfolio-items .portfolio-item:nth-child(5) {
+            margin-bottom: 20px; } }
+      @media screen and (max-width: 600px) {
+        .portfolio .portfolio-items .portfolio-item {
+          margin: 10px 0; } }
+  @media screen and (max-width: 600px) {
+    .portfolio {
+      padding: 20px 5%;
+      line-height: 25px;
+      font-size: 14px; } }
 
 /*! normalize.css v4.2.0 | MIT License | github.com/necolas/normalize.css */
 /**
