@@ -1,6 +1,6 @@
 .home{
 	height: 100vh;
-	background-image: url(../img/home2_small.jpg);
+	background-image: url(../img/background.jpg);
 	color: $blue;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -16,7 +16,7 @@
 		width: 440px;
 		height: 100px;
 		padding: 5px;
-		background-color: rgba($white, .3);
+		background-color: rgba($white, .7);
 
 		h1, h2{
 			height: auto;

@@ -3,16 +3,27 @@ var portfolioItems = document.querySelectorAll(".portfolio-item"),
 	lightbox = document.getElementById('lightbox'),
 	image = document.createElement("img"),
 	lightboxImage = document.getElementById('lightbox').appendChild(image);
-	closeBtn = document.getElementById('close');
+	closeBtn = document.getElementById('close'), 
+	body = document.body;
 
 for (var k = 0; k < portfolioItems.length ; k++) {
 	portfolioItems[k].onclick = function(e) {
-		var portfolioBackground = window.getComputedStyle(this, null).getPropertyValue("background-image");
+		var portfolioBackground = this.dataset.lightbox;
 		lightbox.classList.add('show');
-		image.src = portfolioBackground.replace('url("http://localhost:8080/portfolio2.0/','').replace('")','');
+		image.src = portfolioBackground.replace('url("','').replace('")','');
+		body.classList.add('noscroll');
 	};
 
 	closeBtn.onclick = function(e){
 		lightbox.classList.remove('show');
+		body.classList.remove('noscroll');
 	};
 }
+
+window.addEventListener("keydown", closeBox, false);
+	function closeBox(key){
+		if (key.keyCode == 27) {
+				lightbox.classList.remove('show');
+				body.classList.remove('noscroll');
+			}
+		}

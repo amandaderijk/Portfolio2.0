@@ -1,4 +1,3 @@
-<div class="contact-form">
 <?php
 $name = $_POST['name'];
 $email = $_POST['email'];
@@ -14,9 +13,6 @@ $headers .= 'Cc: birthdayarchive@amandaderijk.com' . "\r\n";
 $headers .= 'Bcc: birthdaycheck@amandaderijk.com' . "\r\n";
 
 mail ($to,$subject,$message,$headers);
-// include "index.html#contact";
-echo "Thanks! I will reply as soon as possible!";
-echo "<script>someJS();</script>"
+
+require 'index.html';
 ?>
-</div>
-<script type="text/javascript"></script>
